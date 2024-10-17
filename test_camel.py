@@ -11,3 +11,7 @@ def test_camel_to_snake_case_with_spaces():
 def test_camel_to_snake_case_without_spaces():
     assert camel_to_snake_case('helloworld') == 'helloworld'
     assert camel_to_snake_case('hello_world') == 'helloworld'
+
+def test_camel_to_snake_case_with_alphanumeric_input():
+    assert camel_to_snake_case('hello5') == 'hello5'
+    assert camel_to_snake_case('keep50up') == 'keep50up'

@@ -7,7 +7,7 @@ def camel_to_snake_case(camelCaseString):
     # removes any space(s) in between with leading/trailing space(s) & "_"
     camelCaseString = camelCaseString.replace('_', '').strip(' ').replace(' ', '')
 
-    if camelCaseString.isalnum():
+    if (any(char.isalpha() for char in camelCaseString)) and (any(char.isdigit() for char in camelCaseString)) :
         return camelCaseString
     else:
         for char in camelCaseString:
